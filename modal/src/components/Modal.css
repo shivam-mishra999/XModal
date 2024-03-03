@@ -1,4 +1,4 @@
-
+/* 
 .modal{
     display: flex;
     flex-direction: column;
@@ -32,4 +32,20 @@ form{
     width: 30vw;
     height: 50vh;
     border-radius: 8px;
+} */
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    width: 30vw;
+    height: 50vh;
+    border-radius: 8px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

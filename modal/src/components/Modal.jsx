@@ -39,7 +39,7 @@ export default function Modal(){
 
     useEffect(()=>{
         const handleClickOutside = (event)=>{
-            const modalContent = document.querySelector('.modal-content');
+            const modalContent = document.querySelector('.modal');
         
             if (openForm && !modalContent.contains(event.target)) {
                 handleCloseForm();
@@ -55,7 +55,7 @@ export default function Modal(){
 
     return (
         <div className='container'>  
-            <div className="modal">
+            
                 <div>
                     <h1>User Details Modal</h1>
                     <button onClick={handleOpenForm}>Open Form</button>
@@ -63,29 +63,32 @@ export default function Modal(){
                 
 
                 {openForm && (
-                    
-                <div className="modal-content">
-                    <form>
-                        <h2>Fill Details</h2>
-                        <label htmlFor="username">Username:</label>
-                        <input id="username" type="text" value={username} onChange={(e)=>setUsername(e.target.value)} required />
+                 <form>  
+                    <div className="modal"> 
+                        <div className="modal-content">
+                            
+                            <h2>Fill Details</h2>
+                            <label htmlFor="username">Username:</label>
+                            <input id="username" type="text" value={username} onChange={(e)=>setUsername(e.target.value)} required />
 
-                        <label htmlFor="email">Email Address:</label>
-                        <input id="email" type="email" value={email} onChange={(e)=> setEmail(e.target.value)} required />
+                            <label htmlFor="email">Email Address:</label>
+                            <input id="email" type="email" value={email} onChange={(e)=> setEmail(e.target.value)} required />
 
-                        <label htmlFor="phone">Phone Number:</label>
-                        <input id="phone" type="text" value={phone} onChange={(e)=>setPhone(e.target.value)} required />
+                            <label htmlFor="phone">Phone Number:</label>
+                            <input id="phone" type="text" value={phone} onChange={(e)=>setPhone(e.target.value)} required />
 
-                        <label htmlFor="dob">Date of Birth:</label>
-                        <input id="dob" type="date" value={dob} onChange={(e)=>setDob(e.target.value)} required />
+                            <label htmlFor="dob">Date of Birth:</label>
+                            <input id="dob" type="date" value={dob} onChange={(e)=>setDob(e.target.value)} required />
 
-                        <button className="submit-button" onClick={handleSubmit}>Submit</button>
-                    </form>
-                
-                </div>
+                            <button className="submit-button" onClick={handleSubmit}>Submit</button>
+                            
+                        
+                        </div>
+                    </div>
+                </form>
             )}
                 
-            </div>
+            
         </div>
     )
 };
