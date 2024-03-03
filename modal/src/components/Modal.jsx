@@ -25,6 +25,7 @@ export default function Modal(){
 
         if (!email.includes('@')) {
             setErrorMessage(`Please include an '@' in the email address. ${email} is missing an '@'.`);
+            return;
         } 
 
         if(phone.length !== 10){
