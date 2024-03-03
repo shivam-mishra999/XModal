@@ -78,7 +78,7 @@ export default function Modal(){
                 <label htmlFor="dob">Date of Birth:</label>
                 <input id="dob" type="date" value={dob} onChange={(e)=>setDob(e.target.value)} required />
 
-                <button onClick={handleSubmit}>Submit</button>
+                <button className="submit-button" onClick={handleSubmit}>Submit</button>
             </div>
             )}
                 
