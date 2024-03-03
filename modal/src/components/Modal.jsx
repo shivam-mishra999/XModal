@@ -72,7 +72,14 @@ export default function Modal(){
                             <input id="username" type="text" value={username} onChange={(e)=>setUsername(e.target.value)} required />
 
                             <label htmlFor="email">Email Address:</label>
-                            <input id="email" type="email" value={email} onChange={(e)=> setEmail(e.target.value)} required />
+                            <input 
+                             id="email"
+                             type="email"
+                             value={email} 
+                             onChange={(e)=> setEmail(e.target.value)} 
+                             required 
+                             title={`Please include an '@' in the email address. ${email} is missing an '@'.`}
+                             />
 
                             <label htmlFor="phone">Phone Number:</label>
                             <input id="phone" type="text" value={phone} onChange={(e)=>setPhone(e.target.value)} required />
