@@ -1,0 +1,35 @@
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+   
+}
+.modal button{
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+}
+.modal button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    border: 1px solid gray;
+    width: 30vw;
+    height: 50vh;
+    border-radius: 8px;
+    
+}
