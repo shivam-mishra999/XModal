@@ -21,7 +21,8 @@
     transform: scale(1.1);
 }
 
-.modal-content{
+
+form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,5 +32,4 @@
     width: 30vw;
     height: 50vh;
     border-radius: 8px;
-    
 }

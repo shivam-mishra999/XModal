@@ -41,7 +41,6 @@ export default function Modal(){
         const handleClickOutside = (event)=>{
             const modalContent = document.querySelector('.modal-content');
         
-            // Check if the clicked element is not a descendant of the modal content
             if (openForm && !modalContent.contains(event.target)) {
                 handleCloseForm();
             }
