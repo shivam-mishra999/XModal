@@ -64,22 +64,26 @@ export default function Modal(){
                 
 
                 {openForm && (
+                    
                 <div className="modal-content">
-                <h2>Fill Details</h2>
-                <label htmlFor="username">Username:</label>
-                <input id="username" type="text" value={username} onChange={(e)=>setUsername(e.target.value)} required />
+                    <form>
+                        <h2>Fill Details</h2>
+                        <label htmlFor="username">Username:</label>
+                        <input id="username" type="text" value={username} onChange={(e)=>setUsername(e.target.value)} required />
 
-                <label htmlFor="email">Email Address:</label>
-                <input id="email" type="text" value={email} onChange={(e)=> setEmail(e.target.value)} required />
+                        <label htmlFor="email">Email Address:</label>
+                        <input id="email" type="text" value={email} onChange={(e)=> setEmail(e.target.value)} required />
 
-                <label htmlFor="phone">Phone Number:</label>
-                <input id="phone" type="text" value={phone} onChange={(e)=>setPhone(e.target.value)} required />
+                        <label htmlFor="phone">Phone Number:</label>
+                        <input id="phone" type="text" value={phone} onChange={(e)=>setPhone(e.target.value)} required />
 
-                <label htmlFor="dob">Date of Birth:</label>
-                <input id="dob" type="date" value={dob} onChange={(e)=>setDob(e.target.value)} required />
+                        <label htmlFor="dob">Date of Birth:</label>
+                        <input id="dob" type="date" value={dob} onChange={(e)=>setDob(e.target.value)} required />
 
-                <button className="submit-button" onClick={handleSubmit}>Submit</button>
-            </div>
+                        <button className="submit-button" onClick={handleSubmit}>Submit</button>
+                    </form>
+                
+                </div>
             )}
                 
             </div>
