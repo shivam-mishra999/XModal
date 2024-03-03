@@ -21,10 +21,14 @@ export default function Modal(){
     }
 
     const handleSubmit = () => {
-        if(!email.includes("@")){
-            alert(`Please include an '@' in the email address. ${email} is missing an '@'.` )
-            return;
+        const emailInput = document.getElementById('email');
+
+        if (!email.includes('@')) {
+            emailInput.setCustomValidity(`Please include an '@' in the email address. ${email} is missing an '@'.`);
+        } else {
+            emailInput.setCustomValidity('');
         }
+        
         if(phone.length !== 10){
             alert("Invalid phone number. Please enter a 10-digit phone number.")
             return;
