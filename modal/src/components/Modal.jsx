@@ -8,6 +8,7 @@ export default function Modal(){
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [dob, setDob] = useState("");
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleOpenForm = (event) => {
         console.log("opened")
@@ -21,14 +22,11 @@ export default function Modal(){
     }
 
     const handleSubmit = () => {
-        const emailInput = document.getElementById('email');
 
         if (!email.includes('@')) {
-            emailInput.setCustomValidity(`Please include an '@' in the email address. ${email} is missing an '@'.`);
-        } else {
-            emailInput.setCustomValidity('');
-        }
-        
+            setErrorMessage(`Please include an '@' in the email address. ${email} is missing an '@'.`);
+        } 
+
         if(phone.length !== 10){
             alert("Invalid phone number. Please enter a 10-digit phone number.")
             return;
@@ -82,7 +80,7 @@ export default function Modal(){
                              value={email} 
                              onChange={(e)=> setEmail(e.target.value)} 
                              required 
-                             title={`Please include an '@' in the email address. ${email} is missing an '@'.`}
+                             title={errorMessage}
                              />
 
                             <label htmlFor="phone">Phone Number:</label>
